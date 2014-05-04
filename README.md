@@ -1,7 +1,11 @@
 ### Qt Minimal Deployment Kits for Windows
 
-- v5.1.1, without ICU
-- v5.2.2, without ICU
+- v5.1.1, build without ICU (Unicode) dependencies. 
+  - You don't have to ship the following files anymore: 
+  - icudt51.dll (22Mb), icuin51.dll (3.5Mb), icuuc51.dll (2Mb). This saves 27.5 MB.
+- v5.2.2, build without ICU
+
+**Configure**
 
 ```
 configure -opensource -confirm-license -platform win32-g++ -make libs
